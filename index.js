@@ -25,7 +25,6 @@ for (i = 0; i <= images.length; i++) {
       .resize(param)
       .toFile(resizedImagePath)
   }
-  
 
   sharp(imagePath)
     .resize(param)
