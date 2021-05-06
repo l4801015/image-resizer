@@ -14,17 +14,18 @@ for (i = 0; i <= images.length; i++) {
   const resizedImagesFolder = folder +  'resizedImages/'
 
   const resizedImagePath = resizedImagesFolder + image
+  
+  const param = {
+    width: 90 // изменять ширину здесь
+  }
 
   if(!fs.existsSync(resizedImagesFolder)) {
     fs.mkdirSync(resizedImagesFolder)
     sharp(imagePath)
-      .resize({width:90})
+      .resize(param)
       .toFile(resizedImagePath)
   }
- 
-  const param = {
-    width: 90
-  }
+  
 
   sharp(imagePath)
     .resize(param)
