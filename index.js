@@ -1,7 +1,6 @@
 const sharp = require('sharp')
 const fs = require('fs')
 const path = require('path')
-const sizeOf = require('image-size')
 
 const folder = path.resolve(__dirname, './images') + '/'
 const images = fs.readdirSync(folder)
